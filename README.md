@@ -1,5 +1,9 @@
 # JMD Umodel BruteForcer
 
+<p align="center">
+  <img alt="Preview" src="./preview.png">
+</p>
+
 ## Overview
 The JMD Umodel BruteForcer is a GUI application designed to automate the generation and execution of various command-line options for the Unreal Model Viewer (UModel). 
 
