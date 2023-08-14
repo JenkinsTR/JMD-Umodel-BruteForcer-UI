@@ -1,0 +1,4637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>JMDigital</author>
+ <class>UmodelBruteForcer</class>
+ <widget class="QWidget" name="UmodelBruteForcer">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>980</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>980</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1400</width>
+    <height>980</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1400</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>UmodelBruteForcer</string>
+  </property>
+  <widget class="QLineEdit" name="umodelExeLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>521</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Tools\Umodel.exe</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="umodelExeLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Umodel.exe location:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>521</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\Bulletstorm</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Game installation folder:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="destFolderLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>580</y>
+     <width>521</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Extracted\UT2004</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="destFolderLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Destination folder:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAnimLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>210</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\Animations</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAnimLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Animation folder:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameSoundLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\Sounds</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameSoundLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sounds folder:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameSmeshLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>StaticMesh folder:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameSmeshLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\StaticMeshes</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameTexLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>360</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\Textures</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameTexLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Textures folder:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsMasterLabel">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>60</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Master Options:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="umodelExePushButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>30</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gamePushButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>80</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameAnimPushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>210</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameSoundPushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>260</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameSmeshPushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>310</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameTexPushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>360</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="destFolderPushButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>580</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoOvCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>80</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Overwrites</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoAnCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>260</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Mesh Animations</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoMeCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>260</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Skeletal Meshes</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoStMeCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>260</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Static Meshes</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoVeMeCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>260</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Vertex Meshes</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoTxCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>290</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Textures</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoMpCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>290</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Morph Targets</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNoLiCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>290</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>No Lightmaps</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsZlibCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>320</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>ZLib compression</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsLzxCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>320</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>LZX compression</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsLzoCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>320</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>LZO compression</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAnimExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>210</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string>Default 'ukx'</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAnimExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>190</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Anims Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameSoundExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>260</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string>Default 'uax'</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameSoundExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>240</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sounds Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameSmeshExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>310</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string>Default 'usx'</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameSmeshExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>290</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>StaticMesh Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameTexExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>340</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Textures Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameTexExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>360</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string>Default 'utx'</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd1ExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>390</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd1ExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>410</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd1Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional folder 1:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd1LineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>410</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\StaticLow</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameAdd1PushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>410</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameAdd2PushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>460</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd2Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional folder 2:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd2ExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>460</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd2ExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>440</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd2LineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>460</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\StaticHigh</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd3ExtLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>490</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional Extension:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAdd3Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional folder 3:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameAdd3PushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>510</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd3ExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>510</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameAdd3LineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>510</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\UT2004\TexturesLow</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>379</y>
+     <width>700</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="ue1Tab">
+    <attribute name="title">
+     <string>UE1</string>
+    </attribute>
+    <widget class="QCheckBox" name="gamesTabUe1CheckBoxUe1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unreal Engine 1</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe1CheckBoxUndying">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Undying</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe1CheckBoxSelectAll">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SELECT ALL</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ue2Tab">
+    <attribute name="title">
+     <string>UE2</string>
+    </attribute>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxUt2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal Tournament 2003,2004</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxUe2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal Engine 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxUc1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal Championship</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxScell">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Splinter Cell 1-4</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxScconv">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Splinter Cell: Conviction</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxL2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Lineage 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxLoco">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Land of Chaos Online (LOCO)</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxBterr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Battle Territory Online</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxSwrc">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>290</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Star Wars: Republic Commando</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxXiii">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>290</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>XIII</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxT3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>260</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tribes: Vengeance</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxSwat4">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>230</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SWAT 4</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxBio">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>200</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Bioshock, Bioshock 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxRag2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>170</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ragnarok Online 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxExt1">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>140</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Exteel</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxAa2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>50</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>America's Army 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxVang">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>80</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Vanguard: Saga of Heroes</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxEos">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>110</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Echo of Soul</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe2CheckBoxSelectAll">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SELECT ALL</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ue3Tab">
+    <attribute name="title">
+     <string>UE3</string>
+    </attribute>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMass2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mass Effect 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxSelectAll">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SELECT ALL</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTurok">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>20</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Turok</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxEndwar">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>EndWar</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMass3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mass Effect 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxR6v2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Rainbow 6: Vegas 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMki">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Injustice: Gods Among Us</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTna">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>60</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>TNA iMPACT!</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBs">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Bulletstorm</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMk">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mortal Kombat</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGowj">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gears of War: Judgment</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxA51">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>BlackSite: Area 51</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMkvdc">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mortal Kombat vs. DC Universe</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMassl">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mass Effect Legendary Edition</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMass">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mass Effect</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMkx">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mortal Kombat X</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxFury">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fury</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGowu">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gears of War: Ultimate</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxUe3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal Engine 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTnaw">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>80</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>WWE All Stars</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBatman3">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>300</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Batman: Arkham Origins</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMedge">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>200</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mirror's Edge</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAo2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>120</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Army of Two</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMcarta">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>240</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Magna Carta 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxXmen">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>220</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>X-Men Origins: Wolverine</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxHuxley">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>160</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Huxley</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDoh">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Destroy All Humans</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxStrang">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>100</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Stranglehold</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBatman">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>260</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Batman: Arkham Asylum</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTlr">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>180</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>The Last Remnant</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBatman2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>280</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Batman: Arkham City</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxSf2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Special Force 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDnd">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dungeons &amp; Dragons: Daggerdale</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxArgo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Rise of the Argonauts</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxShad">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>360</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Shadows of the Damned</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxArgo2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thor: God of Thunder</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxHunt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>320</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Hunted: The Demon's Forge</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGunsl">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>420</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gunslayer Legend</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBorder">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>440</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Borderlands</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxCrime">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>340</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Crime Craft</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxFrontl">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>380</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Frontlines: Fuel of War</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAva">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>360</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>AVA Online</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxFronth">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>400</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Homefront</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBatman4">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>320</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Batman: Arkham Knight</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBox50cent">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>420</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>50 Cent: Blood on the Sand</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTera">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>120</y>
+       <width>161</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>TERA: The Exiled Realm of Arborea</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxApb">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>180</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>All Points Bulletin</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMo">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>300</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Mortal Online</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMoh2010">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>360</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Medal of Honor 2010</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxEns">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>320</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Enslaved: Odyssey to the West</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTrans1">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>220</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Transformers: War for Cybertron</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAcm">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Aliens: Colonial Marines</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTrans2">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>240</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Transformers: Dark of the Moon</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxSing">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>440</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Singularity</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBorder3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>40</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Brothers in Arms: Hell's Highway</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxLeg">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>100</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Legendary: Pandora's Box</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAa3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>280</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>America's Army 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBns">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>140</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Blade &amp;&amp; Soul</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAlpha">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>160</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Alpha Protocol</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMoha">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>340</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Medal of Honor: Airborne</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxUndertow">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>420</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Undertow</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTrans">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>200</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>The Bourne Conspiracy</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBerk">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>400</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Berkanix</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTrans3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>260</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Transformers: Fall of Cybertron</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDarkv">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>80</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dark Void</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxAlice">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>380</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Alice: Madness Returns</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxPla">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>20</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Passion Leads Army</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxXcom">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>300</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>The Bureau: XCOM Declassified</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxXcom2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>320</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>XCOM 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDis">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>480</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dishonored</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxFablej">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>400</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fable: The Journey</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxRem">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>340</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Remember Me</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxLp3">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>440</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Lost Planet 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxLp3y">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>460</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Yaiba: Ninja Gaiden Z</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBio3">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>380</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Bioshock Infinite</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxT4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>460</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tribes: Ascend</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxTaoyuan">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>460</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tao Yuan</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxFable">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>420</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fable Anniversary</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxBorder2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>460</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Borderlands 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxRem2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>360</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Life is Strange</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxThief4">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>260</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thief</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDmc">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>280</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>DmC: Devil May Cry</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGigantic">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>100</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gigantic</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMurd">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>240</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Murdered: Soul Suspect</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxSmite">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>200</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SMITE</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDundef">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>160</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dungeon Defenders</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxSov">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>180</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Seal of Vajra</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxMetroconf">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>40</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Metro Conflict</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxRocketleague">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>80</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Rocket League</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDev3rd">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>140</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Devil's Third</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGuilty">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>220</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Guilty Gear Xrd</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxVec">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>120</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>The Vanishing of Ethan Carter</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxGrav">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>20</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>GRAV</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe3CheckBoxDust514">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>60</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dust 514</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ue4Tab">
+    <attribute name="title">
+     <string>UE4</string>
+    </attribute>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxSelectAll">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>SELECT ALL</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxHit">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>100</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Heroes of Incredible Tales</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxGears4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gears of War 4</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxFablel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fable Legends</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxUt4">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>70</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal Tournament 4</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxArk">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ark: Survival Evolved</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxDaysgone">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Days Gone</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxNgb">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>130</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>New Gundam Breaker</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxParagon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Paragon</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxAscl">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>190</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ascendant One</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxDauntless">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dauntless</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxJedi">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>280</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Star Wars Jedi: Fallen Order</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxBorder3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>220</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Borderlands 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxTekken7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tekken 7</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxLis2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>160</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Life is Strange 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxKh3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>250</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Kingdom Hearts 3</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxLawbr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Lawbreakers</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxSod2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>State of Decay 2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxUe4p">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal engine 4.25 Plus</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxSot">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>310</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sea of Thieves</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gamesTabUe4CheckBoxUe4027">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Unreal engine 4.0-4.27</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="optionsGamesLabel">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>350</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Game overrides:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ProcessButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>920</y>
+     <width>631</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>23</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Process</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>677</x>
+     <y>340</y>
+     <width>710</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>70</y>
+     <width>20</width>
+     <height>901</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowserWarning">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>615</y>
+     <width>631</width>
+     <height>289</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;WARNING:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Each of the checkbox options adds an additional pass to the brute forcing utility.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;For example, If you choose 5 options with 1 game override, and have the Animations, Sounds, StaticMesh and Textures folders populated, then the tool will run Umodel 625 times for 1 file per folder. 2 games will double this amount, and so on.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;This is known as Permutations. In this specific case, there are 4 objects and each object can be combined with any of the 5 options. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;The situation is akin to having 4 slots where each slot can be filled with one of 5 possible choices.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;The principle here is that of the multiplication rule, which states that if you have &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; choices for one task and &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;m&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; choices for another task, then there are &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;n X m&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; choices for both tasks together.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;For this specific scenario, there are 5 choices for the first object, 5 choices for the second object, 5 choices for the third object, and 5 choices for the fourth object.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Therefore, the total number of possible combinations can be calculated as: 5x5x5x5=&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;625 (PER FILE!)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsSndsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>80</y>
+     <width>71</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sounds</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsSelectAllCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>230</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>SELECT ALL</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>190</y>
+     <width>710</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsPermLabel">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>210</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Permutation Options:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsMasterLabelNote">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>60</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>(these will be applied to every run)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsPermLabelNote">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>210</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>(please read warning)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsGamesLabelNote">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>350</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <italic>true</italic>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>(please read warning)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsGamesAddiLabel">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>927</y>
+     <width>150</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Additional game override:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="optionsGamesAddiLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>679</x>
+     <y>947</y>
+     <width>710</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string>e.g 'sg1'   |   Enter the text with no hyphen or quotes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="optionsGamesAddiLabelNote">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>927</y>
+     <width>251</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+     <italic>true</italic>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>(ADVANCED: this is for modified versions of Umodel)</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>902</y>
+     <width>631</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsUnckCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>110</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Uncook (UE3/4/5 only)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameCookedLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>401</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>e.g C:\Games\Bulletstorm\StormGame\CookedPC</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>201</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>'Cooked' folder: (UE 3/4/5 only)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gameCookedPushButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>130</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>538</y>
+     <width>631</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>154</y>
+     <width>631</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>168</y>
+     <width>631</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>The options below are mostly used for Unreal Engine 1 &amp; 2 games. If you have a &quot;Cooked&quot; folder, you can skip them.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="JMDigitalLogo">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>9</y>
+     <width>150</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>23</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>JMDigital</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line_7">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>50</y>
+     <width>710</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="gameCookedExtLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>130</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="maxLength">
+    <number>8</number>
+   </property>
+   <property name="placeholderText">
+    <string>Default 'upk'</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gameAnimExtLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>110</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Cooked Extension:</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowserCpyrght">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>10</y>
+     <width>720</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7pt; font-style:italic;&quot;&gt;Umodel is © Gildor &lt;/span&gt;&lt;a href=&quot;https://www.gildor.org/en/projects/umodel&quot;&gt;&lt;span style=&quot; font-size:7pt; font-style:italic; text-decoration: underline; color:#007af4;&quot;&gt;Umodel Homepage&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7pt; font-style:italic;&quot;&gt;JMD's Umodel Brute Forcer UI is © JMDigital&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7pt; font-style:italic;&quot;&gt;Not affiliated with Epic Games Inc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="openExternalLinks">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="options3rdPartyCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>80</y>
+     <width>71</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>3rd Party</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsUScriptCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>80</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>UnrealScript</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsGltfCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>170</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>glTF meshes</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsPngCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>110</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>PNG textures</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsPs3CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>140</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Playstation 3</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsPs4CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>140</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Playstation 4</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsNswCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>140</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Nintendo Switch</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsIosCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>140</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>iOS (iPhone/iPad)</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsAndroidCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>140</y>
+     <width>71</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Android</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsGrpsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>110</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Group names</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsDdsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>110</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>DDS textures</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsLodsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>110</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>All LODs</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsDisTgaCompCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>80</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>Disable TGA compression</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="optionsMd5CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>170</y>
+     <width>271</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>md5mesh/md5anim format for skeletal meshes</string>
+   </property>
+  </widget>
+  <zorder>textBrowserCpyrght</zorder>
+  <zorder>umodelExeLineEdit</zorder>
+  <zorder>umodelExeLabel</zorder>
+  <zorder>gameLineEdit</zorder>
+  <zorder>gameLabel</zorder>
+  <zorder>destFolderLineEdit</zorder>
+  <zorder>destFolderLabel</zorder>
+  <zorder>gameAnimLineEdit</zorder>
+  <zorder>gameAnimLabel</zorder>
+  <zorder>gameSoundLineEdit</zorder>
+  <zorder>gameSoundLabel</zorder>
+  <zorder>gameSmeshLabel</zorder>
+  <zorder>gameSmeshLineEdit</zorder>
+  <zorder>gameTexLineEdit</zorder>
+  <zorder>gameTexLabel</zorder>
+  <zorder>optionsMasterLabel</zorder>
+  <zorder>umodelExePushButton</zorder>
+  <zorder>gamePushButton</zorder>
+  <zorder>gameAnimPushButton</zorder>
+  <zorder>gameSoundPushButton</zorder>
+  <zorder>gameSmeshPushButton</zorder>
+  <zorder>gameTexPushButton</zorder>
+  <zorder>destFolderPushButton</zorder>
+  <zorder>optionsNoOvCheckBox</zorder>
+  <zorder>optionsNoAnCheckBox</zorder>
+  <zorder>optionsNoMeCheckBox</zorder>
+  <zorder>optionsNoStMeCheckBox</zorder>
+  <zorder>optionsNoVeMeCheckBox</zorder>
+  <zorder>optionsNoTxCheckBox</zorder>
+  <zorder>optionsNoMpCheckBox</zorder>
+  <zorder>optionsNoLiCheckBox</zorder>
+  <zorder>optionsZlibCheckBox</zorder>
+  <zorder>optionsLzxCheckBox</zorder>
+  <zorder>optionsLzoCheckBox</zorder>
+  <zorder>gameAnimExtLineEdit</zorder>
+  <zorder>gameAnimExtLabel</zorder>
+  <zorder>gameSoundExtLineEdit</zorder>
+  <zorder>gameSoundExtLabel</zorder>
+  <zorder>gameSmeshExtLineEdit</zorder>
+  <zorder>gameSmeshExtLabel</zorder>
+  <zorder>gameTexExtLabel</zorder>
+  <zorder>gameTexExtLineEdit</zorder>
+  <zorder>gameAdd1ExtLabel</zorder>
+  <zorder>gameAdd1ExtLineEdit</zorder>
+  <zorder>gameAdd1Label</zorder>
+  <zorder>gameAdd1LineEdit</zorder>
+  <zorder>gameAdd1PushButton</zorder>
+  <zorder>gameAdd2PushButton</zorder>
+  <zorder>gameAdd2Label</zorder>
+  <zorder>gameAdd2ExtLineEdit</zorder>
+  <zorder>gameAdd2ExtLabel</zorder>
+  <zorder>gameAdd2LineEdit</zorder>
+  <zorder>gameAdd3ExtLabel</zorder>
+  <zorder>gameAdd3Label</zorder>
+  <zorder>gameAdd3PushButton</zorder>
+  <zorder>gameAdd3ExtLineEdit</zorder>
+  <zorder>gameAdd3LineEdit</zorder>
+  <zorder>tabWidget</zorder>
+  <zorder>optionsGamesLabel</zorder>
+  <zorder>ProcessButton</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>textBrowserWarning</zorder>
+  <zorder>optionsSndsCheckBox</zorder>
+  <zorder>optionsSelectAllCheckBox</zorder>
+  <zorder>line_3</zorder>
+  <zorder>optionsPermLabel</zorder>
+  <zorder>optionsMasterLabelNote</zorder>
+  <zorder>optionsPermLabelNote</zorder>
+  <zorder>optionsGamesLabelNote</zorder>
+  <zorder>optionsGamesAddiLabel</zorder>
+  <zorder>optionsGamesAddiLineEdit</zorder>
+  <zorder>optionsGamesAddiLabelNote</zorder>
+  <zorder>line_4</zorder>
+  <zorder>optionsUnckCheckBox</zorder>
+  <zorder>gameCookedLineEdit</zorder>
+  <zorder>gameLabel_2</zorder>
+  <zorder>gameCookedPushButton</zorder>
+  <zorder>line_5</zorder>
+  <zorder>line_6</zorder>
+  <zorder>label</zorder>
+  <zorder>JMDigitalLogo</zorder>
+  <zorder>line_7</zorder>
+  <zorder>gameCookedExtLineEdit</zorder>
+  <zorder>gameAnimExtLabel_2</zorder>
+  <zorder>options3rdPartyCheckBox</zorder>
+  <zorder>optionsUScriptCheckBox</zorder>
+  <zorder>optionsGltfCheckBox</zorder>
+  <zorder>optionsPngCheckBox</zorder>
+  <zorder>optionsPs3CheckBox</zorder>
+  <zorder>optionsPs4CheckBox</zorder>
+  <zorder>optionsNswCheckBox</zorder>
+  <zorder>optionsIosCheckBox</zorder>
+  <zorder>optionsAndroidCheckBox</zorder>
+  <zorder>optionsGrpsCheckBox</zorder>
+  <zorder>optionsDdsCheckBox</zorder>
+  <zorder>optionsLodsCheckBox</zorder>
+  <zorder>optionsDisTgaCompCheckBox</zorder>
+  <zorder>optionsMd5CheckBox</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
